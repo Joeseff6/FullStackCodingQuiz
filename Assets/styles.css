@@ -1,0 +1,30 @@
+/* Setting global font style */
+* {
+    font-family: 'JetBrains Mono', monospace;
+    text-align: center;
+}
+
+div {
+    margin: auto;
+}
+
+/* Setting background and font color */
+body {
+    background-color: #1C2541;
+    color: #5BC0BE;
+}
+
+span {
+    font-weight: bolder;
+}
+
+/* Center text, as well as give background color for choices */
+ol {
+    list-style: decimal inside;
+}
+
+li {
+    background-color: #3A506B;
+    border: #1C2541 solid 1px;
+}
+/* Setting font for majority of webpage */
