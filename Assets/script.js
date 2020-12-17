@@ -25,6 +25,7 @@ function startQuestion() {
 }
 
 startBtn.addEventListener('click', function() {
+    startBtn.setAttribute(`class`, `hidden`)
     let secondsLeft = 30;
     timeEl.textContent = `Time: ${secondsLeft}`;
     startQuestion();
