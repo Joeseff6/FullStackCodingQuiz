@@ -10,10 +10,13 @@ startBtn.addEventListener('click', function() {
     let secondsLeft = 30;
     timeEl.textContent = `Time: ${secondsLeft}`;
     var timerInterval = setInterval(function() {
-        // secondsLeft--
-        
+        timeEl.textContent = `Time: ${secondsLeft}`;
+        if(secondsLeft === 0) {
+            clearInterval(timerInterval);
+        }
+        secondsLeft--
 
-    })
-    console.log('ok');
+
+    }, 1000)
 })
 
