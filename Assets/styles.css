@@ -27,8 +27,15 @@ ol {
     list-style: decimal inside;
 }
 
-li {
+h2, p {
     background-color: #3A506B;
-    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 25vw;
 }
 /* Setting font for majority of webpage */
+
+.row {
+    margin: 30vh 20vw 5vh 20vw;
+}
