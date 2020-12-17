@@ -36,6 +36,11 @@ h2, p {
 }
 /* Setting font for majority of webpage */
 
+.hidden {
+    display: none;
+}
+
 .row {
     margin: 30vh 20vw 5vh 20vw;
 }
+
