@@ -2,20 +2,14 @@ var startBtn = document.getElementById(`start`);
 var highscoreBtn = document.getElementById(`highscore`);
 var timeEl = document.getElementById(`timer`)
 var questionBox = document.getElementById(`questions`)
-var question1 = {
-    question: `What does HTML stand for?`,
-    answer1: `Hypertext Mocking Language`,
-    answer2: `Hypertext Markdown Language`,
-    answer3: `Hypertalking Mic Language`,
-    answer4: `Hypertext Memory Log`
-};
+var question1 = { question: `What does HTML stand for?`, answer1: `Hypertext Mocking Language`, answer2: `Hypertext Markdown Language`, answer3: `Hypertalking Mic Language`, answer4: `Hypertext Memory Log`};
 
 
 highscoreBtn.addEventListener('click', function() {
     console.log('ok');
 })
 
-function newQuestion() {
+function startQuestion() {
     var question = document.createElement(`h2`)
     question.textContent = question1.question;
     questionBox.appendChild(question);
@@ -33,7 +27,7 @@ function newQuestion() {
 startBtn.addEventListener('click', function() {
     let secondsLeft = 30;
     timeEl.textContent = `Time: ${secondsLeft}`;
-    newQuestion();
+    startQuestion();
     
     var timerInterval = setInterval(function() {
         timeEl.textContent = `Time: ${secondsLeft}`;
