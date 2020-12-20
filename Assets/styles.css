@@ -34,10 +34,9 @@ h2, p {
     align-items: center;
     margin: 10px 25vw;
 }
-/* Setting font for majority of webpage */
 
-.hidden {
-    display: none;
+h2 {
+    width: 580px;
 }
 
 .row {
