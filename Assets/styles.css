@@ -21,16 +21,20 @@ ol {
     list-style: decimal inside;
 }
 
-h2, p {
+h2, p, table {
     background-color: #3A506B;
     margin: 10px 25vw;
     border: solid #5BC0BE 5px;
 }
 
-
-.row {
+.row{
     margin: 30vh 20vw 5vh 20vw;
 }
+
+#enterScore {
+    margin: 30vh 0 5vh 0;
+}
+
 
 @media screen and (max-width: 610px) {
     

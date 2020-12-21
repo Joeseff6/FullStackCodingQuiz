@@ -36,7 +36,7 @@ startBtn.addEventListener(`click`, function() {
     }
 
     // Store time information for an interval function
-    let secondsLeft = 5;
+    let secondsLeft = 30;
     timeEl.textContent = `Time: ${secondsLeft}`;
 
     // Set a time interval to allow answers to be selected once the start button is clicked
