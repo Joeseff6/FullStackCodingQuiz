@@ -45,7 +45,7 @@ startBtn.addEventListener(`click`, function() {
         if(secondsLeft === 0) {
             alert(`Time's up!`);
             clearInterval(timerInterval);
-            // window.location = ''
+            window.location = './highscore.html'
         }
         secondsLeft--
         question.addEventListener('click', clickAnswer)
