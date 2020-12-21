@@ -2,53 +2,71 @@ var startBtn = document.getElementById(`start`);
 var highscoreBtn = document.getElementById(`highscore`);
 var timeEl = document.getElementById(`timer`)
 var questionBox = document.getElementById(`questions`)
-var question1 = { question: `What does HTML stand for?`, answer1: `Hypertext Mocking Language`, answer2: `Hypertext Markup Language`, answer3: `Hypertalking Mic Language`, answer4: `Hypertext Memory Log`};
+var startContainer = document.getElementById(`startContainer`);
 
+startBtn.addEventListener(`click`, function() {
+    // Remove start button to replace with Player score.
+    startContainer.removeChild(startBtn);
+    var scoreText = document.createElement('span');
+    scoreText.textContent = `Score: 0`;
+    startContainer.appendChild(scoreText);
 
-highscoreBtn.addEventListener('click', function() {
-    console.log('ok');
-})
+    // Set player score to zero
+    var score = 0;
 
-
-function selectAnswer() {
-    questionBox.addEventListener(`click`, function(event) {
-    });
-}
-
-function startQuestion() {
-    var question = document.createElement(`h2`)
-    question.textContent = question1.question;
-    questionBox.appendChild(question);
-    var answerChoices = [];
-
-    for (let i = 0; i < 5; i++) {
-        answerChoices.push(question1[`answer${i}`]);
-        var answer = document.createElement(`p`);
-        answer.textContent = answerChoices[i];
-        questionBox.appendChild(answer);
+    // Change question after an answer choice is selected
+    function newQuestion() {
+        scoreText.textContent = `Score: ${score}`
+        question.setAttribute(`class`, `d-none`)
+        question = document.getElementById(Math.floor(Math.random()*Math.floor(25)+1));
+        question.removeAttribute(`class`, `d-none`);
+        answerchoices = question.querySelectorAll('p');
     }
 
-    selectAnswer()
-}
 
-startBtn.addEventListener('click', function() {
-    startBtn.setAttribute(`class`, `hidden`)
-    let secondsLeft = 30;
+    // Add functionality for when an answer choice is clicked on
+    function clickAnswer(event) {
+        if (event.target.dataset.answer === `correct`) {
+            score++
+            alert(`Correct!`);
+        } else {
+            alert(`Incorrect...`)
+        }
+        newQuestion()
+    }
+
+    // Store time information for an interval function
+    let secondsLeft = 5;
     timeEl.textContent = `Time: ${secondsLeft}`;
-    startQuestion();
-    
+
+    // Set a time interval to allow answers to be selected once the start button is clicked
     var timerInterval = setInterval(function() {
         timeEl.textContent = `Time: ${secondsLeft}`;
         if(secondsLeft === 0) {
             alert(`Time's up!`);
             clearInterval(timerInterval);
+            // window.location = ''
         }
         secondsLeft--
+        question.addEventListener('click', clickAnswer)
     }, 1000)
+
+
+    // Set up questions and answers when start button is clicked
+    var question = document.getElementById(Math.floor(Math.random()*Math.floor(25)+1));
+    question.removeAttribute(`class`, `d-none`);
+    var answerchoices = question.querySelectorAll('p');
+
+
+
+
+
+
 
 
 
 })
+
 
 
 
