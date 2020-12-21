@@ -23,7 +23,6 @@ startBtn.addEventListener(`click`, function() {
         answerchoices = question.querySelectorAll('p');
     }
 
-
     // Add functionality for when an answer choice is clicked on
     function clickAnswer(event) {
         if (event.target.dataset.answer === `correct`) {
@@ -51,24 +50,8 @@ startBtn.addEventListener(`click`, function() {
         question.addEventListener('click', clickAnswer)
     }, 1000)
 
-
     // Set up questions and answers when start button is clicked
     var question = document.getElementById(Math.floor(Math.random()*Math.floor(25)+1));
     question.removeAttribute(`class`, `d-none`);
     var answerchoices = question.querySelectorAll('p');
-
-
-
-
-
-
-
-
-
 })
-
-
-
-
-
-
