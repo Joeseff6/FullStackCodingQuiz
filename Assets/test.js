@@ -2,7 +2,6 @@ var startBtn = document.getElementById(`start`);
 var highscoreBtn = document.getElementById(`highscore`);
 var timeEl = document.getElementById(`timer`)
 var questionBox = document.getElementById(`questions`)
-var score = 0
 var startContainer = document.getElementById(`startContainer`);
 
 var correctAnswers = [`HyperText Markup Language`, `To render a document so it can be displayed in a web browser.`, `Javascript`, `A web application is a webpage that is interactive through Javascript.`, 
@@ -18,36 +17,39 @@ var correctAnswers = [`HyperText Markup Language`, `To render a document so it c
 
 
 startBtn.addEventListener(`click`, function() {
+    // Remove start button to replace with Player score.
     startContainer.removeChild(startBtn);
     var scoreText = document.createElement('span');
-    scoreText.textContent = `Score: ${score}`;
+    scoreText.textContent = `Score: 0`;
     startContainer.appendChild(scoreText);
 
-    // startBtn.setAttribute(`class`, `d-none`)
 
+    // Set up questions and answers when start button is clicked
     var question = document.getElementById(1 || Math.floor(Math.random()*Math.floor(25)+1));
     question.removeAttribute(`class`, `d-none`);
-    // answers
-    
-    // function selectAnswer() {
-    //     var answers = question.querySelectorAll(`p`);
-    //     var answerChoices = [];
-    //     for (let i = 0; i < answers.length; i++) {
-    //         answerChoices[i] = answers[i]; 
-    //     }
-
-    //     console.log(answerChoices)
-    //     answerChoices.addEventListener('click', function() {
-    //         if (answerChoices.dataset.answer === 'correct') {
-    //             alert('correct');
-    //         } else {
-    //             alert('incorrect');
-    //         }
-    //     })
+    var answerchoices = question.querySelectorAll('p');
 
 
-    // };
+    var score = 0;
 
-    // selectAnswer()
+
+    function clickAnswer(event) {
+        if (event.target.dataset.answer === `correct`) {
+            score++
+            alert(`Correct!`);
+        } else {
+            alert(`Incorrect...`)
+        }
+        scoreText.textContent = `Score: ${score}`
+    }
+
+    // Add functionality for when an answer choice is clicked on
+    question.addEventListener('click', clickAnswer)
 
 })
+
+
+
+
+
+
