@@ -39,8 +39,6 @@ table {
     margin: 30vh 20vw 5vh 20vw;
 }
 
-
-
 /* Styling for smaller resolutions. Optimized for iPhone X */
 @media screen and (max-width: 610px) {
     
