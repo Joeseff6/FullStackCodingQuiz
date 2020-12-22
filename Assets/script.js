@@ -41,13 +41,13 @@ startBtn.addEventListener(`click`, function() {
     var answerchoices = question.querySelectorAll('p');
 
     // Store time information for an interval function
-    let secondsLeft = 5;
+    let secondsLeft = 90;
     timeEl.textContent = `Time: ${secondsLeft}`;
 
     // Set a time interval to allow answers to be selected once the start button is clicked
     var timerInterval = setInterval(function() {
         timeEl.textContent = `Time: ${secondsLeft}`;
-        if(secondsLeft <= 0 || questionNumber > 25) {
+        if (secondsLeft <= 0 || questionNumber > 25) {
             alert(`Quiz over!`);
             clearInterval(timerInterval);
         // store score here
@@ -73,8 +73,12 @@ startBtn.addEventListener(`click`, function() {
     // Change question after an answer choice is selected
     function newQuestion() {
         scoreText.textContent = `Score: ${score}`
-        questionNumber += 1;
-        numOfQuestions.textContent = `Question ${questionNumber} of 25`
+        questionNumber++
+        if (questionNumber >= 25) {
+            numOfQuestions.textContent = `Question 25 of 25`
+        } else {
+            numOfQuestions.textContent = `Question ${questionNumber} of 25`
+        }
         question.setAttribute(`class`, `d-none`)
         question = document.getElementById(questionNumber);
         question.removeAttribute(`class`, `d-none`);
