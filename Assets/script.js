@@ -41,7 +41,7 @@ startBtn.addEventListener(`click`, function() {
     var answerchoices = question.querySelectorAll('p');
 
     // Store time information for an interval function
-    let secondsLeft = 75;
+    let secondsLeft = 90;
     timeEl.textContent = `Time: ${secondsLeft}`;
 
     // Set a time interval to allow answers to be selected once the start button is clicked

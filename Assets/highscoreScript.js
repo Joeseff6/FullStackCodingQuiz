@@ -5,6 +5,8 @@ const returnBtn = document.getElementById(`return`);
 var initials = [];
 var scores = [];
 
+alert(`Submit your initials by hitting enter`)
+
 // Adds return function to return back to coding quiz
 returnBtn.addEventListener(`click`, function() {
     window.location = `./index.html`;
