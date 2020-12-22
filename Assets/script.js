@@ -43,6 +43,7 @@ startBtn.addEventListener(`click`, function() {
             score++
             alert(`Correct!`);
         } else {
+            secondsLeft--
             alert(`Incorrect...`)
         }
         newQuestion()
