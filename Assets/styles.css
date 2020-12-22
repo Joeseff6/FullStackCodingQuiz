@@ -4,43 +4,44 @@
     text-align: center;
 }
 
-header {
-    background-color: #3A506B;
-    border: solid #5BC0BE 5px;
-}
-
 /* Setting background and font color */
 body {
     background-color: #1C2541;
     color: #5BC0BE;
 }
 
-
-/* Center text, as well as give background color for choices */
-ol {
-    list-style: decimal inside;
+/* Syle web application header */
+header {
+    background-color: #3A506B;
+    border: solid #5BC0BE 5px;
 }
 
+/* Make text on screen bigger */
+span, label {
+    font-size: x-large;
+}
+
+/* Give background color and border for choices and highscore table. Give spacing to size "boxes" */
 h2, p, table {
     background-color: #3A506B;
     margin: 10px 25vw;
     border: solid #5BC0BE 5px;
 }
 
-span, label {
-    font-size: x-large;
-}
-
+/* Give table dimensions to cover more pixels on highscore.html */
 table {
     width: 500px;
     height: 100px;
 }
 
+/* Margin to center content on page */
 .row{
     margin: 30vh 20vw 5vh 20vw;
 }
 
 
+
+/* Styling for smaller resolutions. Optimized for iPhone X */
 @media screen and (max-width: 610px) {
     
     h2, p {
@@ -50,4 +51,13 @@ table {
     .row {
         margin: 30vh 0 5vh 0;
     }
+
+    #enterInitials {
+        margin-bottom: 30px;
+    }
+
+    table {
+        width: 200px;
+    }
+
 }
