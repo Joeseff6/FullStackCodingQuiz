@@ -6,6 +6,9 @@ var startContainer = document.getElementById(`startContainer`);
 var scores = [];
 
 
+highscoreBtn.addEventListener(`click`, function() {
+    window.location = './highscore.html'
+})
 
 startBtn.addEventListener(`click`, function() {
     getScore()
