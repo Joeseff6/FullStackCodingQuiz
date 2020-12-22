@@ -38,19 +38,17 @@ startBtn.addEventListener(`click`, function() {
     var answerchoices = question.querySelectorAll('p');
 
     // Store time information for an interval function
-    let secondsLeft = 60;
+    let secondsLeft = 5;
     timeEl.textContent = `Time: ${secondsLeft}`;
 
     // Set a time interval to allow answers to be selected once the start button is clicked
     var timerInterval = setInterval(function() {
         timeEl.textContent = `Time: ${secondsLeft}`;
-        if(secondsLeft === 0) {
-            alert(`Time's up!`);
+        if(secondsLeft <= 0 || questionNumber > 25) {
+            alert(`Quiz over!`);
             clearInterval(timerInterval);
-
         // store score here
             storeScore()
-
             window.location = './highscore.html'
         }
         secondsLeft--
