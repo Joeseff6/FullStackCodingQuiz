@@ -3,6 +3,7 @@ var highscoreBtn = document.getElementById(`highscore`);
 var timeEl = document.getElementById(`timer`)
 var questionBox = document.getElementById(`questions`)
 var startContainer = document.getElementById(`startContainer`);
+var numOfQuestions = document.getElementById(`numOfQuestions`);
 var scores = [];
 
 
@@ -31,8 +32,10 @@ startBtn.addEventListener(`click`, function() {
     // Set player score to zero
     var score = 0;
 
-    // Set up questions and answers when start button is clicked
     var questionNumber = 1;
+    numOfQuestions.textContent = `Question ${questionNumber} of 25`
+
+    // Set up questions and answers when start button is clicked
     var question = document.getElementById(questionNumber);
     question.removeAttribute(`class`, `d-none`);
     var answerchoices = question.querySelectorAll('p');
@@ -71,6 +74,7 @@ startBtn.addEventListener(`click`, function() {
     function newQuestion() {
         scoreText.textContent = `Score: ${score}`
         questionNumber += 1;
+        numOfQuestions.textContent = `Question ${questionNumber} of 25`
         question.setAttribute(`class`, `d-none`)
         question = document.getElementById(questionNumber);
         question.removeAttribute(`class`, `d-none`);
