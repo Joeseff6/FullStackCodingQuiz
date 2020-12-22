@@ -49,7 +49,7 @@ startBtn.addEventListener(`click`, function() {
     }
 
     // Store time information for an interval function
-    let secondsLeft = 5;
+    let secondsLeft = 60;
     timeEl.textContent = `Time: ${secondsLeft}`;
 
 
