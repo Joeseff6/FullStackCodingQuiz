@@ -1,8 +1,14 @@
 const submitForm = document.getElementById(`submitForm`);
 const formValue = document.getElementById(`enterInitials`);
 const rowContainer = document.getElementById(`rowContainer`);
+const returnBtn = document.getElementById(`return`);
 var initials = [];
 var scores = [];
+
+returnBtn.addEventListener(`click`, function() {
+    window.location = `./index.html`;
+})
+
 
 getStoredInfo();
 

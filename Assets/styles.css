@@ -27,12 +27,13 @@ h2, p, table {
     border: solid #5BC0BE 5px;
 }
 
-.row{
-    margin: 30vh 20vw 5vh 20vw;
+table {
+    width: 500px;
+    height: 100px;
 }
 
-#submitForm {
-    margin: 30vh 0 5vh 0;
+.row{
+    margin: 30vh 20vw 5vh 20vw;
 }
 
 
