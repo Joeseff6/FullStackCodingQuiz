@@ -27,6 +27,10 @@ h2, p, table {
     border: solid #5BC0BE 5px;
 }
 
+span, label {
+    font-size: x-large;
+}
+
 table {
     width: 500px;
     height: 100px;
