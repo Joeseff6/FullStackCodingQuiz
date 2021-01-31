@@ -1,8 +1,6 @@
 # FullStackCodingQuiz
 
-## License
-
-MIT
+![GitHub](https://img.shields.io/github/license/Joeseff6/FullStackCodingQuiZ)
 ## Link to My Deployed Application
 
 https://joeseff6.github.io/FullStackCodingQuiz/
