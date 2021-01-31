@@ -1,5 +1,10 @@
+(https://img.shields.io/static/v1?label=License&message=MIT&color=brightgreen)
+
 # FullStackCodingQuiz
 
+## License
+
+MIT
 ## Link to My Deployed Application
 
 https://joeseff6.github.io/FullStackCodingQuiz/
@@ -12,6 +17,11 @@ The purpose of the deployed application is to test the user's knowledge in all t
 
 A quiz will be given as a mini-game to the user, which will provide a series of questions relating to HTML, CSS, and Javascript. Each set of answers will have a question, that when an answer is clicked, will dynamically change to show the next set of questions. Once the game is over (either by answering all questions, or the timer runs out), the user will be taken to a highscore table in another web page. The user can then enter their initials and hit enter to save their score. They can also go back and play again after submitting initials.
 
+## Technologies Used
+
+* Javascript
+* Bootstrap
+* Google fonts
 ### _** WARNING: In the game's current state, you must submit your initials before leaving the highscore page in order to properly save score.**_
 
 ## Tasks to Complete the Job :white_check_mark:
